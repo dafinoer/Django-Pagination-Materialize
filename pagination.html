@@ -1,0 +1,42 @@
+{% load i18n %}
+
+<ul class="pagination" style="float:right">
+{% if page.has_previous %}
+        <li class="waves-effect"><a href="?page={{ page.previous_page_number }}"><i class="material-icons">chevron_left</i></a></li>
+{% endif %}
+
+    {% for pnum in begin %}
+        {% ifequal page.number pnum %}
+        <li class="active"><a href="?page={{pnum}}">{{pnum}}</a></li>
+        {% else %}
+        <li class="waves-effect"><a href="?page={{ pnum }}">{{ pnum }} </a></li>
+        {% endifequal %}
+    {% endfor %}
+
+    {% if middle %}
+            <span>...</span>
+            {% for pnum in middle %}
+                {% ifequal page.number pnum %}
+                    <li class="active"><a href="?page={{pnum}}">{{pnum}}</a></li>
+                {% else %}
+                    <li class="waves-effect"><a href="?page={{ pnum }}">{{ pnum }} </a></li>
+                {% endifequal %}
+            {% endfor %}
+        {% endif %}
+
+    {% if end %}
+            <span>...</span>
+            {% for pnum in end %}
+                {% ifequal page.number pnum %}
+                    <li class="active"><a href="?page={{pnum}}">{{pnum}}</a></li>
+                {% else %}
+                    <li class="waves-effect"><a href="?page={{ pnum }}">{{ pnum }} </a></li>
+                {% endifequal %}
+            {% endfor %}
+        {% endif %}
+
+    {% if page.has_next %}
+        <li class="waves-effect"><a href="?page={{ page.next_page_number }}"><i class="material-icons">chevron_right</i></a></li>
+    {% endif %}
+
+</ul>
