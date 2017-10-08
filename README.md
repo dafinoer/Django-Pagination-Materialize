@@ -1,6 +1,6 @@
 # Django-pagination-materialize
 
-implementation django pagination from [djangosnippet](https://djangosnippets.org/snippets/1441/),integration using materialize pagination [materialize](http://materializecss.com/pagination.html)
+implementation django pagination from [djangosnippets](https://djangosnippets.org/snippets/1441/),integration using materialize pagination [materialize](http://materializecss.com/pagination.html)
 
 
 ##### How to Use
