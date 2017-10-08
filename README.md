@@ -5,7 +5,7 @@ implementation django pagination from [djangosnippets](https://djangosnippets.or
 
 ##### How to Use
 1. go to you apps/views.py
-2. create some view for retrive all data (i'm use class-based generic views TemplateView)
+2. create some view for retrieve all data (i'm use class-based generic views TemplateView)
 3. create directory in your, example apps/templates
 4. add new file using name pagination.py
 5. and use ```{% load pagination %} {% pagination yourpage %}``` in your templates
